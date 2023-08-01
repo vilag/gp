@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="margin-top: 10px; margin-bottom: 30px; text-align: left; padding-left: 20px; padding-top: 20px;">
-                <b onclick="regresar();" style="cursor: pointer;">Regresar</b>
+                <b onclick="regresar();" style="cursor: pointer; border-radius: 5px; padding: 10px; color: #fff; background-color: #122742;">Regresar</b>
             </div>
             <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="margin-top: 10px; margin-bottom: 10px; text-align: center;">
                 <label for="">Total:</label>&nbsp;<b id="suma_gastos"></b><br><label for="" id="nom_categoria"></label>&nbsp;<b id="suma_cat"></b>
