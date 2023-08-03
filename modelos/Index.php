@@ -33,7 +33,7 @@ Class Index
     public function listar_movimientos($fecha)
 	{
 
-		$sql="SELECT a.idmovimiento, b.nombre as categoria, a.movimiento, a.monto, a.fecha_hora FROM movimiento a INNER JOIN categorias b ON b.idcategoria = a.idcategoria where DATE(a.fecha_hora) = '$fecha'  ORDER BY a.fecha_hora DESC";
+		$sql="SELECT a.idmovimiento, b.nombre as categoria, a.movimiento, a.monto, a.fecha_hora FROM movimiento a INNER JOIN categorias b ON b.idcategoria = a.idcategoria where MONTH(fecha_hora) = MONTH('$fecha') AND YEAR(fecha_hora) = YEAR('$fecha')  ORDER BY a.fecha_hora DESC";
 		//return ejecutarConsultaSimpleFila($sql);
 		return ejecutarConsulta($sql);			
 	}
@@ -41,7 +41,7 @@ Class Index
 	public function listar_movimientos_cat($idcategoria,$fecha)
 	{
 
-		$sql="SELECT a.idmovimiento, b.nombre as categoria, a.movimiento, a.monto, a.fecha_hora FROM movimiento a INNER JOIN categorias b ON b.idcategoria = a.idcategoria WHERE a.idcategoria='$idcategoria' AND where DATE(a.fecha_hora) = '$fecha' ORDER BY a.fecha_hora DESC";
+		$sql="SELECT a.idmovimiento, b.nombre as categoria, a.movimiento, a.monto, a.fecha_hora FROM movimiento a INNER JOIN categorias b ON b.idcategoria = a.idcategoria WHERE a.idcategoria='$idcategoria' AND where MONTH(fecha_hora) = MONTH('$fecha') AND YEAR(fecha_hora) = YEAR('$fecha') ORDER BY a.fecha_hora DESC";
 		//return ejecutarConsultaSimpleFila($sql);
 		return ejecutarConsulta($sql);			
 	}
@@ -49,7 +49,7 @@ Class Index
     public function suma_gastos($fecha)
 	{
 
-		$sql="SELECT sum(monto) as total FROM movimiento WHERE DATE(fecha_hora)='$fecha'";
+		$sql="SELECT sum(monto) as total FROM movimiento WHERE MONTH(fecha_hora) = MONTH('$fecha') AND YEAR(fecha_hora) = YEAR('$fecha')";
 		return ejecutarConsultaSimpleFila($sql);
 		//return ejecutarConsulta($sql);			
 	}
