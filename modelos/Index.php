@@ -41,7 +41,7 @@ Class Index
 	public function listar_movimientos_cat($idcategoria,$fecha)
 	{
 
-		$sql="SELECT a.idmovimiento, b.nombre as categoria, a.movimiento, a.monto, a.fecha_hora FROM movimiento a INNER JOIN categorias b ON b.idcategoria = a.idcategoria WHERE a.idcategoria='$idcategoria' where MONTH(fecha_hora) = MONTH('$fecha') AND YEAR(fecha_hora) = YEAR('$fecha') ORDER BY a.fecha_hora DESC";
+		$sql="SELECT a.idmovimiento, b.nombre as categoria, a.movimiento, a.monto, a.fecha_hora FROM movimiento a INNER JOIN categorias b ON b.idcategoria = a.idcategoria WHERE a.idcategoria='$idcategoria' AND MONTH(fecha_hora) = MONTH('$fecha') AND YEAR(fecha_hora) = YEAR('$fecha') ORDER BY a.fecha_hora DESC";
 		//return ejecutarConsultaSimpleFila($sql);
 		return ejecutarConsulta($sql);			
 	}
