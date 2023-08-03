@@ -15,7 +15,7 @@ Class Index
 
 		$sql="SELECT a.nombre,a.idcategoria,
 
-		(SELECT sum(monto)  FROM movimiento WHERE idcategoria = a.idcategoria AND DATE(fecha_hora) = '$fecha') as suma
+		(SELECT sum(monto)  FROM movimiento WHERE idcategoria = a.idcategoria AND MONTH(fecha_hora) = MONTH('$fecha') AND YEAR(fecha_hora) = YEAR('$fecha')) as suma
 		
 		FROM categorias a ORDER BY nombre ASC";
 		//return ejecutarConsultaSimpleFila($sql);

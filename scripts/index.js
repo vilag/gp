@@ -8,6 +8,7 @@ function init()
 
 function listar_categorias()
 {
+    
     var fecha=moment().format('YYYY-MM-DD');
     //console.log("entra");
     $.post("ajax/index.php?op=listar_categorias&fecha="+fecha,function(r){
