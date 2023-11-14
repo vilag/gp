@@ -114,6 +114,21 @@ switch ($_GET["op"]){
 	 		
 		break;
 
+		case 'listar_pagos_rapidos':
+
+			$rspta = $index->listar_pagos_rapidos();
+				
+			while ($reg = $rspta->fetch_object())
+					{
+						
+						echo '
+						
+						';
+						
+					}
+
+		break;
+
 	
 }
 ?>

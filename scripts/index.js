@@ -114,4 +114,12 @@ function regresar(){
     listar_movimientos();
 }
 
+function listar_pagos_rapidos(){
+
+        $.post("ajax/index.php?op=listar_pagos_rapidos",function(r){
+        $("#pagos_rapidos").html(r);
+                         
+        });
+}
+
 init();
