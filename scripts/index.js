@@ -4,6 +4,7 @@ function init()
     listar_categorias_box();
     suma_gastos();
     listar_movimientos();
+    listar_pagos_rapidos();
 }
 
 function listar_categorias()

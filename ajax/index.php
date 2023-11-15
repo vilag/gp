@@ -122,7 +122,7 @@ switch ($_GET["op"]){
 					{
 						
 						echo '
-						
+							<div style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left; margin-left: 10px; width: 80px; height: 80px; border-radius: 50%; background-image: url('.$reg->imagen.'); background-repeat: no-repeat; background-size: cover;"></div>
 						';
 						
 					}

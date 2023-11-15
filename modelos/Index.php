@@ -54,6 +54,14 @@ Class Index
 		//return ejecutarConsulta($sql);			
 	}
 
+	public function listar_pagos_rapidos()
+	{
+
+		$sql="SELECT * FROM pagos_rapidos ORDER BY nombre DESC";
+		//return ejecutarConsultaSimpleFila($sql);
+		return ejecutarConsulta($sql);			
+	}
+
 }
 ?>
 

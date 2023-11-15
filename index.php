@@ -20,7 +20,7 @@
             </div>
             <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="margin-top: 20px; overflow: scroll;">
                 <div style="width: 2000px; height: 100px; background-color: white;" id="pagos_rapidos">
-                    <div style="float: left; margin-left: 10px; width: 100px; height: 100px; border-radius: 50%; background-image: url(https://res.cloudinary.com/ddcszcshl/image/upload/v1699996923/GP/c75x7jusa9aufklyk3hj.png); background-repeat: no-repeat; background-size: cover;">
+                    <!-- <div style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left; margin-left: 10px; width: 100px; height: 100px; border-radius: 50%; background-image: url(https://res.cloudinary.com/ddcszcshl/image/upload/v1699996923/GP/c75x7jusa9aufklyk3hj.png); background-repeat: no-repeat; background-size: cover;">
 
                     </div>
                     <div style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left; margin-left: 20px; width: 100px; height: 100px; border-radius: 50%; background-image: url(https://res.cloudinary.com/ddcszcshl/image/upload/v1699997386/GP/dlxuta2xr1xv2mjntv3g.png); background-repeat: no-repeat; background-size: cover;">
@@ -56,6 +56,9 @@
                     <div style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left; margin-left: 20px; width: 100px; height: 100px; border-radius: 50%; background-image: url(https://res.cloudinary.com/ddcszcshl/image/upload/v1699999193/GP/zcfxqgmkha6sm2sbnk3b.png); background-repeat: no-repeat; background-size: cover;">
 
                     </div>
+                    <div style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left; margin-left: 20px; width: 100px; height: 100px; border-radius: 50%; background-image: url(https://res.cloudinary.com/ddcszcshl/image/upload/v1700082210/GP/eiipuzzcxaitv4ukffum.png); background-repeat: no-repeat; background-size: cover;">
+
+                    </div> -->
                 </div>
             </div>
             
