@@ -114,15 +114,72 @@ switch ($_GET["op"]){
 	 		
 		break;
 
-		case 'listar_pagos_rapidos':
+		case 'listar_pagos_rapidos_3':
 
-			$rspta = $index->listar_pagos_rapidos();
+			$rspta = $index->listar_pagos_rapidos_3();
 				
 			while ($reg = $rspta->fetch_object())
 					{
+						if ($reg->idpago_rel>0) {
+							$borde_3 = "border: #4DF732 5px solid;";
+						}else{
+							$borde_3 = "";
+						}
 						
 						echo '
-							<div style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left; margin-left: 10px; width: 80px; height: 80px; border-radius: 50%; background-image: url('.$reg->imagen.'); background-repeat: no-repeat; background-size: cover;"></div>
+							<div style="width: 100%; width: 80px; height: 80px; float: left; margin-left: 10px; text-align: center; padding: 12px;">
+								<div onclick="select_pago_rapido('.$reg->idpago.',\''.$reg->nombre.'\',\''.$reg->idcategoria.'\',\''.$reg->monto.'\',\''.$reg->idpago_rel.'\',\''.$reg->estatus.'\');" style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left;  width: 100%; height: 100%; border-radius: 50%; background-image: url('.$reg->imagen.'); background-repeat: no-repeat; background-size: cover; '.$borde_3.'""></div>
+								<b>$'.$reg->monto.'</b>
+							</div>
+							
+						';
+						
+					}
+
+		break;
+
+		case 'listar_pagos_rapidos_1':
+
+			$rspta = $index->listar_pagos_rapidos_1();
+				
+			while ($reg = $rspta->fetch_object())
+					{
+						if ($reg->idpago_rel>0) {
+							$borde_1 = "border: #4DF732 5px solid;";
+						}else{
+							$borde_1 = "";
+						}
+						
+						echo '
+							<div style="width: 100%; width: 80px; height: 80px; float: left; margin-left: 10px; text-align: center; padding: 12px;">
+								<div onclick="select_pago_rapido('.$reg->idpago.',\''.$reg->nombre.'\',\''.$reg->idcategoria.'\',\''.$reg->monto.'\',\''.$reg->idpago_rel.'\',\''.$reg->estatus.'\');" style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left;  width: 100%; height: 100%; border-radius: 50%; background-image: url('.$reg->imagen.'); background-repeat: no-repeat; background-size: cover; '.$borde_1.'""></div>
+								<b>$'.$reg->monto.'</b>
+							</div>
+							
+						';
+						
+					}
+
+		break;
+
+		case 'listar_pagos_rapidos_2':
+
+			$rspta = $index->listar_pagos_rapidos_2();
+				
+			while ($reg = $rspta->fetch_object())
+					{
+						if ($reg->idpago_rel>0) {
+							$borde_2 = "border: #4DF732 5px solid;";
+						}else{
+							$borde_2 = "";
+						}
+						
+						echo '
+							<div style="width: 100%; width: 80px; height: 80px; float: left; margin-left: 10px; text-align: center; padding: 12px;">
+								<div onclick="select_pago_rapido('.$reg->idpago.',\''.$reg->nombre.'\',\''.$reg->idcategoria.'\',\''.$reg->monto.'\',\''.$reg->idpago_rel.'\',\''.$reg->estatus.'\');" style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left;  width: 100%; height: 100%; border-radius: 50%; background-image: url('.$reg->imagen.'); background-repeat: no-repeat; background-size: cover; '.$borde_2.'""></div>
+								<b>$'.$reg->monto.'</b>
+							</div>
+							
 						';
 						
 					}

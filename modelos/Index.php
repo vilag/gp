@@ -49,15 +49,37 @@ Class Index
     public function suma_gastos($fecha)
 	{
 
-		$sql="SELECT sum(monto) as total FROM movimiento WHERE MONTH(fecha_hora) = MONTH('$fecha') AND YEAR(fecha_hora) = YEAR('$fecha')";
+		$sql="SELECT sum(monto) as total,
+
+		(SELECT sum(monto) FROM pagos_rapidos WHERE prioridad = 1) as pagos1,
+		(SELECT sum(monto) FROM pagos_rapidos WHERE prioridad = 2) as pagos2,
+		(SELECT sum(monto) FROM pagos_rapidos WHERE prioridad = 3) as pagos3 
+		
+		FROM movimiento WHERE MONTH(fecha_hora) = MONTH('$fecha') AND YEAR(fecha_hora) = YEAR('$fecha')";
 		return ejecutarConsultaSimpleFila($sql);
 		//return ejecutarConsulta($sql);			
 	}
 
-	public function listar_pagos_rapidos()
+	public function listar_pagos_rapidos_3()
 	{
 
-		$sql="SELECT * FROM pagos_rapidos ORDER BY nombre DESC";
+		$sql="SELECT * FROM pagos_rapidos WHERE prioridad = 3";
+		//return ejecutarConsultaSimpleFila($sql);
+		return ejecutarConsulta($sql);			
+	}
+
+	public function listar_pagos_rapidos_1()
+	{
+
+		$sql="SELECT * FROM pagos_rapidos WHERE prioridad = 1";
+		//return ejecutarConsultaSimpleFila($sql);
+		return ejecutarConsulta($sql);			
+	}
+
+	public function listar_pagos_rapidos_2()
+	{
+
+		$sql="SELECT * FROM pagos_rapidos WHERE prioridad = 2";
 		//return ejecutarConsultaSimpleFila($sql);
 		return ejecutarConsulta($sql);			
 	}

@@ -19,46 +19,24 @@
                 
             </div>
             <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="margin-top: 20px; overflow: scroll;">
-                <div style="width: 2000px; height: 100px; background-color: white;" id="pagos_rapidos">
-                    <!-- <div style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left; margin-left: 10px; width: 100px; height: 100px; border-radius: 50%; background-image: url(https://res.cloudinary.com/ddcszcshl/image/upload/v1699996923/GP/c75x7jusa9aufklyk3hj.png); background-repeat: no-repeat; background-size: cover;">
-
-                    </div>
-                    <div style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left; margin-left: 20px; width: 100px; height: 100px; border-radius: 50%; background-image: url(https://res.cloudinary.com/ddcszcshl/image/upload/v1699997386/GP/dlxuta2xr1xv2mjntv3g.png); background-repeat: no-repeat; background-size: cover;">
-
-                    </div>
-                    <div style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left; margin-left: 20px; width: 100px; height: 100px; border-radius: 50%; background-image: url(https://res.cloudinary.com/ddcszcshl/image/upload/v1699997494/GP/qkh4sxyc89njmmli1zpk.png); background-repeat: no-repeat; background-size: cover;">
-
-                    </div>
-                    <div style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left; margin-left: 20px; width: 100px; height: 100px; border-radius: 50%; background-image: url(https://res.cloudinary.com/ddcszcshl/image/upload/v1699997617/GP/wi56etq3ufylrqtafvst.png); background-repeat: no-repeat; background-size: cover;">
-
-                    </div>
-                    <div style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left; margin-left: 20px; width: 100px; height: 100px; border-radius: 50%; background-image: url(https://res.cloudinary.com/ddcszcshl/image/upload/v1699998013/GP/ktzgx4lixthfxyo8nzgp.png); background-repeat: no-repeat; background-size: cover;">
-
-                    </div>
-                    <div style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left; margin-left: 20px; width: 100px; height: 100px; border-radius: 50%; background-image: url(https://res.cloudinary.com/ddcszcshl/image/upload/v1699998237/GP/whrjcbsfthxyaascrkmp.png); background-repeat: no-repeat; background-size: cover;">
-
-                    </div>
-                    <div style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left; margin-left: 20px; width: 100px; height: 100px; border-radius: 50%; background-image: url(https://res.cloudinary.com/ddcszcshl/image/upload/v1699998484/GP/yl00jiixat5nrz5gr0u2.png); background-repeat: no-repeat; background-size: cover;">
-
-                    </div>
-                    <div style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left; margin-left: 20px; width: 100px; height: 100px; border-radius: 50%; background-image: url(https://res.cloudinary.com/ddcszcshl/image/upload/v1699998596/GP/qbanxpvhm2ucbwinas3s.png); background-repeat: no-repeat; background-size: cover;">
-
-                    </div>
-                    <div style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left; margin-left: 20px; width: 100px; height: 100px; border-radius: 50%; background-image: url(https://res.cloudinary.com/ddcszcshl/image/upload/v1699998867/GP/edrpzzcozyjtamy7c1t2.png); background-repeat: no-repeat; background-size: cover;">
-
-                    </div>
-                    <div style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left; margin-left: 20px; width: 100px; height: 100px; border-radius: 50%; background-image: url(https://res.cloudinary.com/ddcszcshl/image/upload/v1699999028/GP/pziqd4cvhf1wdoac5idu.png); background-repeat: no-repeat; background-size: cover;">
-
-                    </div>
-                    <div style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left; margin-left: 20px; width: 100px; height: 100px; border-radius: 50%; background-image: url(https://res.cloudinary.com/ddcszcshl/image/upload/v1699999175/GP/o5irld4loedjqjysw7px.png); background-repeat: no-repeat; background-size: cover;">
-
-                    </div>
-                    <div style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left; margin-left: 20px; width: 100px; height: 100px; border-radius: 50%; background-image: url(https://res.cloudinary.com/ddcszcshl/image/upload/v1699999193/GP/zcfxqgmkha6sm2sbnk3b.png); background-repeat: no-repeat; background-size: cover;">
-
-                    </div>
-                    <div style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left; margin-left: 20px; width: 100px; height: 100px; border-radius: 50%; background-image: url(https://res.cloudinary.com/ddcszcshl/image/upload/v1700082210/GP/eiipuzzcxaitv4ukffum.png); background-repeat: no-repeat; background-size: cover;">
-
-                    </div> -->
+                <div style="width: 100%; text-align: center; color: #9D2904;">
+                    <b id="sub_pagos1" style="font-size: 25px;"></b>
+                </div>
+                <div style="width: 2000px; height: 100px; background-color: white;" id="pagos_rapidos_1">
+                </div>
+            </div>
+            <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="margin-top: 20px; overflow: scroll;">
+                <div style="width: 100%; text-align: center; color: #9D2904;">
+                    <b id="sub_pagos2" style="font-size: 25px;"></b>
+                </div>
+                <div style="width: 2000px; height: 100px; background-color: white;" id="pagos_rapidos_2">
+                </div>
+            </div>
+            <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="margin-top: 20px; overflow: scroll;">
+                <div style="width: 100%; text-align: center; color: #9D2904;">
+                    <b id="sub_pagos3" style="font-size: 25px;"></b>
+                </div>
+                <div style="width: 2000px; height: 100px; background-color: white;" id="pagos_rapidos_3">
                 </div>
             </div>
             
