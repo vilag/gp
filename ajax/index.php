@@ -127,7 +127,7 @@ switch ($_GET["op"]){
 						}
 						
 						echo '
-							<div style="width: 100%; width: 80px; height: 80px; float: left; margin-left: 10px; text-align: center; padding: 12px;">
+							<div style="width: 100%; width: 80px; height: 80px; float: left; margin-left: 10px; text-align: center; padding: 7px;">
 								<div onclick="select_pago_rapido('.$reg->idpago.',\''.$reg->nombre.'\',\''.$reg->idcategoria.'\',\''.$reg->monto.'\',\''.$reg->idpago_rel.'\',\''.$reg->estatus.'\');" style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left;  width: 100%; height: 100%; border-radius: 50%; background-image: url('.$reg->imagen.'); background-repeat: no-repeat; background-size: cover; '.$borde_3.'""></div>
 								<b>$'.$reg->monto.'</b>
 							</div>
@@ -151,7 +151,7 @@ switch ($_GET["op"]){
 						}
 						
 						echo '
-							<div style="width: 100%; width: 80px; height: 80px; float: left; margin-left: 10px; text-align: center; padding: 12px;">
+							<div style="width: 100%; width: 80px; height: 80px; float: left; margin-left: 10px; text-align: center; padding: 7px;">
 								<div onclick="select_pago_rapido('.$reg->idpago.',\''.$reg->nombre.'\',\''.$reg->idcategoria.'\',\''.$reg->monto.'\',\''.$reg->idpago_rel.'\',\''.$reg->estatus.'\');" style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left;  width: 100%; height: 100%; border-radius: 50%; background-image: url('.$reg->imagen.'); background-repeat: no-repeat; background-size: cover; '.$borde_1.'""></div>
 								<b>$'.$reg->monto.'</b>
 							</div>
@@ -175,7 +175,7 @@ switch ($_GET["op"]){
 						}
 						
 						echo '
-							<div style="width: 100%; width: 80px; height: 80px; float: left; margin-left: 10px; text-align: center; padding: 12px;">
+							<div style="width: 100%; width: 80px; height: 80px; float: left; margin-left: 10px; text-align: center; padding: 7px;">
 								<div onclick="select_pago_rapido('.$reg->idpago.',\''.$reg->nombre.'\',\''.$reg->idcategoria.'\',\''.$reg->monto.'\',\''.$reg->idpago_rel.'\',\''.$reg->estatus.'\');" style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left;  width: 100%; height: 100%; border-radius: 50%; background-image: url('.$reg->imagen.'); background-repeat: no-repeat; background-size: cover; '.$borde_2.'""></div>
 								<b>$'.$reg->monto.'</b>
 							</div>
