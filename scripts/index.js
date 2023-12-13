@@ -123,6 +123,7 @@ function regresar(){
     $("#suma_cat").text("");
     document.getElementById("div_datos_cat").style.display = "none";
     listar_movimientos();
+    document.getElementById("box_pagosrapidos").style.display="block";
 }
 
 function listar_pagos_rapidos(){
@@ -161,6 +162,8 @@ function select_pago_rapido(idpago_rapido,concepto,idcategoria,monto,idpago_rel,
 
     $.post("ajax/index.php?op=listar_movimientos_cat&idcategoria="+idcategoria+"&fecha="+fecha,function(r){
     $("#lineas").html(r);
+
+        document.getElementById("box_pagosrapidos").style.display="none";
                      
     });
 }

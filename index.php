@@ -18,29 +18,32 @@
                 <label for="">Total:</label>&nbsp;<b id="suma_gastos"></b><br><label for="" id="nom_categoria"></label>&nbsp;<b id="suma_cat"></b>
                 
             </div>
-            <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="padding-top: 30px;">
-                <b id="sub_pagos1" style="font-size: 20px;"></b>
-            </div>
-            <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="margin-top: 0px; box-shadow: 5px 5px 10px rgba(0,0,0,0.2); overflow: scroll; padding-top: 10px;">
-                <div style="width: 2000px; height: 120px; background-color: white;" id="pagos_rapidos_1">
+            <div id="box_pagosrapidos" class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="padding-top: 30px;">
+                    <b id="sub_pagos1" style="font-size: 20px;"></b>
+                </div>
+                <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="margin-top: 0px; box-shadow: 5px 5px 10px rgba(0,0,0,0.2); overflow: scroll; padding-top: 10px;">
+                    <div style="width: 2000px; height: 120px; background-color: white;" id="pagos_rapidos_1">
+                    </div>
+                </div>
+                <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="padding-top: 30px;">
+                    <b id="sub_pagos2" style="font-size: 20px;"></b>
+                </div>
+                <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="margin-top: 0px; box-shadow: 5px 5px 10px rgba(0,0,0,0.2); overflow: scroll; padding-top: 10px;">
+                    
+                    <div style="width: 2000px; height: 120px; background-color: white;" id="pagos_rapidos_2">
+                    </div>
+                </div>
+                <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="padding-top: 30px;">
+                    <b id="sub_pagos3" style="font-size: 20px;"></b>
+                </div>
+                <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="margin-top: 0px; box-shadow: 5px 5px 10px rgba(0,0,0,0.2); overflow: scroll; padding-top: 10px;">
+                    
+                    <div style="width: 2000px; height: 120px; background-color: white;" id="pagos_rapidos_3">
+                    </div>
                 </div>
             </div>
-            <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="padding-top: 30px;">
-                <b id="sub_pagos2" style="font-size: 20px;"></b>
-            </div>
-            <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="margin-top: 0px; box-shadow: 5px 5px 10px rgba(0,0,0,0.2); overflow: scroll; padding-top: 10px;">
-                
-                <div style="width: 2000px; height: 120px; background-color: white;" id="pagos_rapidos_2">
-                </div>
-            </div>
-            <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="padding-top: 30px;">
-                <b id="sub_pagos3" style="font-size: 20px;"></b>
-            </div>
-            <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="margin-top: 0px; box-shadow: 5px 5px 10px rgba(0,0,0,0.2); overflow: scroll; padding-top: 10px;">
-                
-                <div style="width: 2000px; height: 120px; background-color: white;" id="pagos_rapidos_3">
-                </div>
-            </div>
+            
             
             <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="margin-top: 20px;">
                 <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" id="box_categorias" style="padding-left: 5%;">
