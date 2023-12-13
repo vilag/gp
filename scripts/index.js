@@ -55,6 +55,7 @@ function guardar()
             $("#monto").val("");
             $("#idcategoria").val("");
             $("#box_categorias").show();
+            document.getElementById("box_pagosrapidos").style.display="block";
 
             listar_movimientos();
             suma_gastos();
