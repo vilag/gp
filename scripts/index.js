@@ -59,6 +59,7 @@ function guardar()
             listar_movimientos();
             suma_gastos();
             listar_categorias_box();
+            listar_pagos_rapidos();
 
             idpago_rapido_1 = 0;
             concepto_1 = "";

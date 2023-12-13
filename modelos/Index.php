@@ -71,7 +71,7 @@ Class Index
 	public function listar_pagos_rapidos_3()
 	{
 
-		$sql="SELECT * FROM pagos_rapidos WHERE prioridad = 3";
+		$sql="SELECT * FROM pagos_rapidos WHERE prioridad = 3 AND estatus=0";
 		//return ejecutarConsultaSimpleFila($sql);
 		return ejecutarConsulta($sql);			
 	}
@@ -79,7 +79,7 @@ Class Index
 	public function listar_pagos_rapidos_1()
 	{
 
-		$sql="SELECT * FROM pagos_rapidos WHERE prioridad = 1";
+		$sql="SELECT * FROM pagos_rapidos WHERE prioridad = 1 AND estatus=0";
 		//return ejecutarConsultaSimpleFila($sql);
 		return ejecutarConsulta($sql);			
 	}
@@ -87,7 +87,7 @@ Class Index
 	public function listar_pagos_rapidos_2()
 	{
 
-		$sql="SELECT * FROM pagos_rapidos WHERE prioridad = 2";
+		$sql="SELECT * FROM pagos_rapidos WHERE prioridad = 2 AND estatus=0";
 		//return ejecutarConsultaSimpleFila($sql);
 		return ejecutarConsulta($sql);			
 	}
