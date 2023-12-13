@@ -22,10 +22,18 @@ Class Index
 		return ejecutarConsulta($sql);			
 	}
 
-    public function guardar($categoria,$concepto,$monto,$fecha_hora)
+    public function guardar($idcategoria,$concepto,$monto,$fecha_hora,$idpago_rapido,$monto_capt)
 	{
+		if ($idpago_rapido>0 AND $monto_capt>=$monto) {
+			$sql_1="UPDATE pagos_rapidos SET estatus = 1 WHERE idpago='$idpago_rapido'";
+			ejecutarConsulta($sql_1);
 
-		$sql="INSERT INTO movimiento (idcategoria,movimiento,monto,fecha_hora) VALUES ('$categoria', '$concepto', '$monto', '$fecha_hora')";
+			$sql_2="UPDATE pagos_rapidos SET estatus = 1 WHERE idpago_rel='$idpago_rapido'";
+			ejecutarConsulta($sql_2);
+			//return ejecutarConsultaSimpleFila($sql);
+		}
+
+		$sql="INSERT INTO movimiento (idcategoria,movimiento,monto,fecha_hora,idpago_rapido) VALUES ('$idcategoria', '$concepto', '$monto', '$fecha_hora', '$idpago_rapido')";
 		//return ejecutarConsultaSimpleFila($sql);
 		return ejecutarConsulta($sql);			
 	}

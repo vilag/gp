@@ -48,12 +48,14 @@ switch ($_GET["op"]){
 
 		case 'guardar':
 
-			$categoria = $_POST['categoria'];
-			$concepto = $_POST['concepto'];
-			$monto = $_POST['monto'];
+			$idcategoria = $_POST['idcategoria_1'];
+			$concepto = $_POST['concepto_1'];
+			$monto = $_POST['monto_1'];
 			$fecha_hora = $_POST['fecha_hora'];
+			$idpago_rapido = $_POST['idpago_rapido_1'];
+			$monto_capt = $_POST['monto_capt'];
 
-			$rspta=$index->guardar($categoria,$concepto,$monto,$fecha_hora);
+			$rspta=$index->guardar($idcategoria,$concepto,$monto,$fecha_hora,$idpago_rapido,$monto_capt);
 	 		echo json_encode($rspta);
 	 		
 		break;
@@ -128,7 +130,7 @@ switch ($_GET["op"]){
 						
 						echo '
 							<div style="width: 100%; width: 80px; height: 80px; float: left; margin-left: 10px; text-align: center; padding: 7px;">
-								<div onclick="select_pago_rapido('.$reg->idpago.',\''.$reg->nombre.'\',\''.$reg->idcategoria.'\',\''.$reg->monto.'\',\''.$reg->idpago_rel.'\',\''.$reg->estatus.'\');" style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left;  width: 100%; height: 100%; border-radius: 50%; background-image: url('.$reg->imagen.'); background-repeat: no-repeat; background-size: cover; '.$borde_3.'""></div>
+								<div onclick="select_pago_rapido('.$reg->idpago.',\''.$reg->nombre.'\',\''.$reg->idcategoria.'\',\''.$reg->monto.'\',\''.$reg->idpago_rel.'\',\''.$reg->estatus.'\');" style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left;  width: 100%; height: 100%; border-radius: 50%; background-image: url('.$reg->imagen.'); background-repeat: no-repeat; background-size: cover; '.$borde_3.' cursor: pointer;"></div>
 								<b>$'.$reg->monto.'</b>
 							</div>
 							
@@ -152,7 +154,7 @@ switch ($_GET["op"]){
 						
 						echo '
 							<div style="width: 100%; width: 80px; height: 80px; float: left; margin-left: 10px; text-align: center; padding: 7px;">
-								<div onclick="select_pago_rapido('.$reg->idpago.',\''.$reg->nombre.'\',\''.$reg->idcategoria.'\',\''.$reg->monto.'\',\''.$reg->idpago_rel.'\',\''.$reg->estatus.'\');" style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left;  width: 100%; height: 100%; border-radius: 50%; background-image: url('.$reg->imagen.'); background-repeat: no-repeat; background-size: cover; '.$borde_1.'""></div>
+								<div onclick="select_pago_rapido('.$reg->idpago.',\''.$reg->nombre.'\',\''.$reg->idcategoria.'\',\''.$reg->monto.'\',\''.$reg->idpago_rel.'\',\''.$reg->estatus.'\');" style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left;  width: 100%; height: 100%; border-radius: 50%; background-image: url('.$reg->imagen.'); background-repeat: no-repeat; background-size: cover; '.$borde_1.' cursor: pointer;"></div>
 								<b>$'.$reg->monto.'</b>
 							</div>
 							
@@ -176,7 +178,7 @@ switch ($_GET["op"]){
 						
 						echo '
 							<div style="width: 100%; width: 80px; height: 80px; float: left; margin-left: 10px; text-align: center; padding: 7px;">
-								<div onclick="select_pago_rapido('.$reg->idpago.',\''.$reg->nombre.'\',\''.$reg->idcategoria.'\',\''.$reg->monto.'\',\''.$reg->idpago_rel.'\',\''.$reg->estatus.'\');" style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left;  width: 100%; height: 100%; border-radius: 50%; background-image: url('.$reg->imagen.'); background-repeat: no-repeat; background-size: cover; '.$borde_2.'""></div>
+								<div onclick="select_pago_rapido('.$reg->idpago.',\''.$reg->nombre.'\',\''.$reg->idcategoria.'\',\''.$reg->monto.'\',\''.$reg->idpago_rel.'\',\''.$reg->estatus.'\');" style="box-shadow: 5px 5px 10px rgba(0,0,0,0.2); float: left;  width: 100%; height: 100%; border-radius: 50%; background-image: url('.$reg->imagen.'); background-repeat: no-repeat; background-size: cover; '.$borde_2.' cursor: pointer;"></div>
 								<b>$'.$reg->monto.'</b>
 							</div>
 							

@@ -1,9 +1,9 @@
-var idpago_rapido = 0;
-var concepto = "";
-var idcategoria = 0;
-var monto = 0;   
-var idpago_rel = 0;
-var estatus = 0;
+var idpago_rapido_1 = 0;
+var concepto_1 = "";
+var idcategoria_1 = 0;
+var monto_1 = 0;   
+var idpago_rel_1 = 0;
+var estatus_1 = 0;
 
 function init()
 {
@@ -36,20 +36,16 @@ function listar_categorias_box()
 
 function guardar()
 {
-    var categoria = $("#idcategoria").val();
-    var concepto = $("#concepto").val();
-    var monto = $("#monto").val();
-
-    // alert(categoria);
-    // alert(concepto);
-    // alert(monto);
 
     var fecha=moment().format('YYYY-MM-DD');
 	var hora=moment().format('HH:mm:ss');
 	var fecha_hora=fecha+" "+hora;
+    var monto_capt = $("#monto").val();
 
-    if (categoria>0 && concepto!="" && monto>0) {
-        $.post("ajax/index.php?op=guardar",{categoria:categoria,concepto:concepto,monto:monto,fecha_hora:fecha_hora},function(data, status)
+    console.log(idcategoria_1+" idcategoria "+concepto_1+" concepto "+monto_1+" monto ");
+
+    if (idcategoria_1>0 && concepto_1!="" && monto_1>0) {
+        $.post("ajax/index.php?op=guardar",{idcategoria_1:idcategoria_1,concepto_1:concepto_1,monto_1:monto_1,fecha_hora:fecha_hora,idpago_rapido_1:idpago_rapido_1,monto_capt:monto_capt},function(data, status)
 		{
 			data = JSON.parse(data);
 
@@ -63,6 +59,13 @@ function guardar()
             listar_movimientos();
             suma_gastos();
             listar_categorias_box();
+
+            idpago_rapido_1 = 0;
+            concepto_1 = "";
+            idcategoria_1 = 0;
+            monto_1 = 0;   
+            idpago_rel_1 = 0;
+            estatus_1 = 0;
 			
 		});
     }else{
@@ -100,6 +103,8 @@ function suma_gastos()
 }
 
 function select_cat(idcategoria,nombre,suma){
+  
+    idcategoria_1 = idcategoria;
     $("#idcategoria").val(idcategoria);
     $("#nom_categoria").text(nombre);
     $("#suma_cat").text("$ "+suma);
@@ -145,12 +150,14 @@ function listar_pagos_rapidos(){
 
 function select_pago_rapido(idpago_rapido,concepto,idcategoria,monto,idpago_rel,estatus){
 
-    idpago_rapido = idpago_rapido;
-    concepto = concepto;
-    idcategoria = idcategoria;
-    monto = monto;   
-    idpago_rel = idpago_rel;
-    estatus = estatus;
+    console.log(idcategoria+" idcategoria "+concepto+" concepto "+monto+" monto ");
+
+    idpago_rapido_1 = idpago_rapido;
+    concepto_1 = concepto;
+    idcategoria_1 = idcategoria;
+    monto_1 = monto;   
+    idpago_rel_1 = idpago_rel;
+    estatus_1 = estatus;
     $("#idcategoria").val(idcategoria);
     $("#concepto").val(concepto);
     $("#monto").val(monto);
@@ -160,7 +167,7 @@ function select_pago_rapido(idpago_rapido,concepto,idcategoria,monto,idpago_rel,
 	var hora=moment().format('HH:mm:ss');
 	var fecha_hora=fecha+" "+hora;
 
-    $.post("ajax/index.php?op=listar_movimientos_cat&idcategoria="+idcategoria+"&fecha="+fecha,function(r){
+    $.post("ajax/index.php?op=listar_movimientos_cat&idcategoria="+idcategoria_1+"&fecha="+fecha,function(r){
     $("#lineas").html(r);
 
         document.getElementById("box_pagosrapidos").style.display="none";
