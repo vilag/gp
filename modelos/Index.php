@@ -33,7 +33,12 @@ Class Index
 			//return ejecutarConsultaSimpleFila($sql);
 		}
 
-		$sql="INSERT INTO movimiento (idcategoria,movimiento,monto,fecha_hora,idpago_rapido) VALUES ('$idcategoria', '$concepto', '$monto', '$fecha_hora', '$idpago_rapido')";
+		if ($idpago_rapido>0) {
+			$sql_3="UPDATE pagos_rapidos SET monto = monto-'$monto_capt' WHERE idpago='$idpago_rapido'";
+			ejecutarConsulta($sql_3);
+		}
+
+		$sql="INSERT INTO movimiento (idcategoria,movimiento,monto,fecha_hora,idpago_rapido) VALUES ('$idcategoria', '$concepto', '$monto_capt', '$fecha_hora', '$idpago_rapido')";
 		//return ejecutarConsultaSimpleFila($sql);
 		return ejecutarConsulta($sql);			
 	}
