@@ -14,13 +14,18 @@ if ($conn->connect_error) {
 }
 
 $dia = date('j');
+$dia_full = date("Y-m-d");
 $hora = date('H:i:s');
 $hora_number = date('H');
-echo $dia." ".$hora;
+echo $dia_full." ".$hora;
+$dia_completo = $dia_full." ".$hora;
 
 if ($dia==1 AND $hora_number==00) {
     $sql_calculos = "UPDATE pagos_rapidos SET estatus=0";
     $result_calculos = $conn->query($sql_calculos);
+
+    $sql_calculos2 = "INSERT INTO reg_reinicio(fecha_hora) VALUES('$dia_completo')";
+    $result_calculos2 = $conn->query($sql_calculos2);
 }
 
 // $sql_pd1 = "
