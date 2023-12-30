@@ -41,10 +41,11 @@ function guardar()
 	var hora=moment().format('HH:mm:ss');
 	var fecha_hora=fecha+" "+hora;
     var monto_capt = $("#monto").val();
+    monto_1 = monto_capt;
 
     console.log(idcategoria_1+" idcategoria "+concepto_1+" concepto "+monto_1+" monto ");
 
-    if (idcategoria_1>0 && concepto_1!="" && monto_1>0) {
+    if (parseInt(idcategoria_1)>0 && concepto_1!="" && parseFloat(monto_1)>0) {
         $.post("ajax/index.php?op=guardar",{idcategoria_1:idcategoria_1,concepto_1:concepto_1,monto_1:monto_1,fecha_hora:fecha_hora,idpago_rapido_1:idpago_rapido_1,monto_capt:monto_capt},function(data, status)
 		{
 			data = JSON.parse(data);
