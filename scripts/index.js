@@ -7,23 +7,23 @@ var estatus_1 = 0;
 
 function init()
 {
-    listar_categorias();
+    //listar_categorias();
     listar_categorias_box();
     suma_gastos();
     listar_movimientos();
     listar_pagos_rapidos();
 }
 
-function listar_categorias()
-{
+// function listar_categorias()
+// {
     
-    var fecha=moment().format('YYYY-MM-DD');
-    //console.log("entra");
-    $.post("ajax/index.php?op=listar_categorias&fecha="+fecha,function(r){
-    $("#select_categorias").html(r);
+//     var fecha=moment().format('YYYY-MM-DD');
+//     //console.log("entra");
+//     $.post("ajax/index.php?op=listar_categorias&fecha="+fecha,function(r){
+//     $("#select_categorias").html(r);
              
-    });
-}
+//     });
+// }
 function listar_categorias_box()
 {
     var fecha=moment().format('YYYY-MM-DD');
@@ -40,12 +40,12 @@ function guardar()
     var fecha=moment().format('YYYY-MM-DD');
 	var hora=moment().format('HH:mm:ss');
 	var fecha_hora=fecha+" "+hora;
-    var monto_capt = $("#monto").val();
-    monto_1 = monto_capt;
+    monto_capt = $("#monto").val();
+    concepto_1 = $("#concepto").val();
 
     console.log(idcategoria_1+" idcategoria "+concepto_1+" concepto "+monto_1+" monto ");
 
-    if (parseInt(idcategoria_1)>0 && concepto_1!="" && parseFloat(monto_1)>0) {
+    if (parseInt(idcategoria_1)>0 && concepto_1!="" && parseFloat(monto_capt)>0) {
         $.post("ajax/index.php?op=guardar",{idcategoria_1:idcategoria_1,concepto_1:concepto_1,monto_1:monto_1,fecha_hora:fecha_hora,idpago_rapido_1:idpago_rapido_1,monto_capt:monto_capt},function(data, status)
 		{
 			data = JSON.parse(data);
@@ -108,7 +108,7 @@ function suma_gastos()
 function select_cat(idcategoria,nombre,suma){
   
     idcategoria_1 = idcategoria;
-    $("#idcategoria").val(idcategoria);
+   // $("#idcategoria").val(idcategoria);
     $("#nom_categoria").text(nombre);
     $("#suma_cat").text("$ "+suma);
     $("#box_categorias").hide();
