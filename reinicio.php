@@ -20,7 +20,7 @@ $hora_number = date('H');
 echo $dia_full." ".$hora;
 $dia_completo = $dia_full." ".$hora;
 
-if ($dia==1 AND $hora_number==00) {
+if ($dia==4 AND $hora_number==00) {
     $sql_calculos = "UPDATE pagos_rapidos SET estatus=0";
     $result_calculos = $conn->query($sql_calculos);
 
